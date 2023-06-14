@@ -77,7 +77,7 @@ instance Pretty Binder where
     pretty (Inherit inherit source ids semicolon)
         = base $ group (pretty inherit <> hardspace
                  <> pretty source <> line
-                 <> nest 2 (sepBy softline ids)) <> pretty semicolon
+                 <> nest 4 (sepBy softline ids)) <> pretty semicolon
 
     pretty (Assignment selectors assign expr semicolon)
         = base $ group (hcat selectors <> hardspace
